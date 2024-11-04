@@ -73,12 +73,13 @@
     .cs-button-solid {
         z-index: 1;
         position: relative;
+        text-transform: uppercase;
         display: inline-block;
-        background-color: var(--primary);
+        background-color: black;
         width: auto;
         padding: 0 calc(30 / 16 * 1rem);
         text-decoration: none;
-    border-radius: 999px;
+    border-radius: 5px;
         font-size: calc(16 / 16 * 1rem);
         line-height: calc(50 / 16 * 1em);
         font-weight: bold;
