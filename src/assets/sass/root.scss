@@ -85,8 +85,7 @@
         font-weight: bold;
         // Transition Properties
         color: white;
-        transition: color 0.3s;
-        transition-delay: 0.1s;
+        
         text-align: center;
 
         &:hover {
@@ -109,11 +108,11 @@
             height: 100%;
             border:2px solid black;
             opacity: 0;
-            border-radius: 999px;
+            border-radius: 5px;
 
             //Transition properties
             width: 0;
-            transition: width 0.3s;
+            transition: width 0.1s;
         }
     }
 }

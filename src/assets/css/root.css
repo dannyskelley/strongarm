@@ -73,8 +73,6 @@
     line-height: 3.125em;
     font-weight: bold;
     color: white;
-    transition: color 0.3s;
-    transition-delay: 0.1s;
     text-align: center;
   }
   .cs-button-solid:hover {
@@ -96,9 +94,9 @@
     height: 100%;
     border: 2px solid black;
     opacity: 0;
-    border-radius: 999px;
+    border-radius: 5px;
     width: 0;
-    transition: width 0.3s;
+    transition: width 0.1s;
   }
 }
 /* Fonts and general styles */
