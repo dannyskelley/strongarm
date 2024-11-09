@@ -995,7 +995,7 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #footer {
-    background: #000;
+    background: #fff;
     padding: 5.25rem 0 1.25rem;
     font-size: min(4vw, 1.2em);
   }
@@ -1024,7 +1024,7 @@
     width: 21.9285714286rem;
     font-size: 0.875rem;
     line-height: 1.9285714286rem;
-    color: #fff;
+    color: #000;
     text-align: center;
   }
   #footer .right-section {
@@ -1050,12 +1050,12 @@
     margin-bottom: 0.75rem;
     list-style: none;
     font-size: 1.125rem;
-    color: #fff;
+    color: #000;
   }
   #footer .right-section .lists ul li a {
     text-decoration: none;
     line-height: 1.1666666667em;
-    color: #fff;
+    color: #000;
     transition: color 0.3s;
     transition: all ease 0.5s;
   }

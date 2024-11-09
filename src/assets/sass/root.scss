@@ -1206,7 +1206,7 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
     #footer {
-        background: #000;
+        background: #fff;
         padding: calc(84 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
         font-size: min(4vw, 1.2em);
 
@@ -1236,7 +1236,7 @@
                 width: calc(307 / 14 * 1rem);
                 font-size: calc(14 / 16 * 1rem);
                 line-height: calc(27 / 14 * 1rem);
-                color: #fff;
+                color: #000;
                 text-align: center;
             }
         }
@@ -1262,12 +1262,12 @@
                         margin-bottom: calc(12 / 16 * 1rem);
                         list-style: none;
                         font-size: calc(18 / 16 * 1rem);
-                        color: #fff;
+                        color: #000;
 
                         a {
                             text-decoration: none;
                             line-height: calc(21 / 18 * 1em);
-                            color: #fff;
+                            color: #000;
                             transition: color 0.3s;
                             transition:all ease .5s;
                             &:hover {

@@ -2,21 +2,60 @@
 <!--                   Footer                     -->
 <!-- ============================================ -->
 
+<style>
+    .cs-social {
+    /* 32px - 80px */
+    margin-top: clamp(2rem, 6vw, 5rem);
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: 0.75em;
+  }
+    .cs-social-link {
+    /* 32px - 52px */
+    width: clamp(2rem, 4vw, 3.25rem);
+    height: clamp(2rem, 4vw, 3.25rem);
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  .cs-social-link:hover {
+    background-color: #666;
+    transform: translateY(-0.1875rem);
+  }
+ .cs-social-img {
+    /* 14px - 24px */
+    height: clamp(0.875rem, 2vw, 1.5rem);
+    width: auto;
+    display: block;
+  }
+</style>
+
 
 <footer id="footer">
     <div class="container">
         <div class="left-section">
             
                 
-            <a class="logo" href="/"><img style="filter: invert(100%); margin: auto; display: block;" loading="lazy" decoding="async" src="/assets/images/logo.svg" alt="logo" width="264" height="78"></a>
-            <Div class="cs-topper" style="color:#999">Detroit General Labor</Div>
-            <Div class="cs-topper" style="color:#999; margin-bottom: 50px;">"We're here to make your life easier"</Div>
+            <a href="/" class="cs-logo" aria-label="back to home">
+                <img src="/assets/images/navlogo.jpg" alt="logo" width="210" aria-hidden="true" decoding="async">
+            </a>
+                        <Div class="cs-topper" style="color:#999"></Div>
+            <Div class="cs-topper" style="color:#000; margin-bottom: 30px;">Detroit Yoga & Meditation Classes</Div>
+            
+            
             <div class="cs-social" style="margin: 20px 0px 50px;">
-<Div class="cs-topper">Message us on:</Div>
-                <a class="cs-social-link" aria-label="visit google profile" href="https://nextdoor.com/profile/01fYx_9bKZFb2nLMK/?is=feed_author">
-                    <img style="margin-right: 20px;width: 200px; height: 50px; filter: grayscale(1) brightness(1000%);" class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/nextdoor.svg" alt="google">
-                </a>
 
+<a class="cs-social-link" aria-label="visit facebook profile" href="">
+    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
+</a>
+<a class="cs-social-link" aria-label="visit instagram profile" href="">
+    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="instagram" width="11" height="11">
+</a>
 
        
             </div>
@@ -38,7 +77,7 @@
                     </li>
 
                     <li>
-                        <a href="/#top">Navigate to Top of page</a>
+                        <a href="/#top">Top of page</a>
                     </li>
                 </ul>
 
@@ -47,8 +86,8 @@
         </div>
     </div>
     <STYLE>
-        .credit {color:white; text-align: left;}
-        .gandalfpill {transition: all ease .2s;margin-left:5px;vertical-align:middle;  display: inline-block; background-color: white; padding:0 8px; border-radius: 999px;}
+      #footer  .credit {color:black;}
+        .gandalfpill {transition: all ease .2s;margin-left:5px;vertical-align:middle;  display: inline-block; border:.5px solid black; background-color: white; padding:0 8px; border-radius: 999px;}
     .gandalfpill:hover img {filter: grayscale(1) brightness(1000%);transition: all ease .8s;}
     .gandalfpill:hover {border:1px  solid white; background-color: black;  transform: translateY(-5px); transition: all ease .2s;}
     .back2top {font-size:2px}
