@@ -698,7 +698,6 @@
     justify-content: flex-end;
     align-items: center;
     margin: auto;
-    max-width: 80rem;
     width: 100%;
     gap: 1.5rem;
   }
@@ -1136,7 +1135,6 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     margin: auto;
-    max-width: 82.5rem;
     width: 96%;
     padding: 0;
   }
