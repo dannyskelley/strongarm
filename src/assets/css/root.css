@@ -9,7 +9,7 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: red;
+    --primary: #E63946;
     --primaryLight: green;
     --secondary: #505B2E;
     --secondaryLight: #001f3f;
@@ -18,7 +18,7 @@
     --bodyTextColorWhite: #fafbfc;
     --nav:white ;
     --navLink:black ;
-    --navLinkActive:red ;
+    --navLinkActive: #E63946 ;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -47,8 +47,7 @@
     font-weight: 600;
     color: var(--headerColor);
     text-align: inherit;
-    font-family: "Alfa Slab One", Arial, sans-serif;
-    text-transform: uppercase;
+    font-family: "Fanwood Text", Arial, sans-serif;
   }
   .cs-text {
     margin: 0;
@@ -64,7 +63,7 @@
     position: relative;
     text-transform: uppercase;
     display: inline-block;
-    background-color: red;
+    background-color: var(--primary);
     width: auto;
     padding: 0 1.875rem;
     text-decoration: none;
@@ -159,10 +158,10 @@
   }
   @font-face {
     font-style: normal;
-    font-family: "Alfa Slab One";
+    font-family: "Fanwood Text";
     font-weight: 100;
     font-display: swap;
-    src: local(""), url("/assets/fonts/alfa-slab-one-v19-latin-regular.woff2") format("woff2"), url("/assets/fonts/alfa-slab-one-v19-latin-regular.woff2") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local(""), url("/assets/fonts/fanwood-text-v15-latin-regular.woff2") format("woff2"), url("/assets/fonts/fanwood-text-v15-latin-regular.woff2") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   /* roboto-regular - latin */
   @font-face {
