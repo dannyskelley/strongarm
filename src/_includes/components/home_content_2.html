@@ -1,0 +1,259 @@
+<!-- ============================================ -->
+<!--                 Why Choose Us                -->
+<!-- ============================================ -->
+
+<style>
+    /*-- -------------------------- -->
+<---       Why Choose Us        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #why-choose-681 {
+        padding: var(--sectionPadding);
+        background-color: #fafafa;
+    }
+    #why-choose-681 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #why-choose-681 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 33.875rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+    #why-choose-681 .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+    #why-choose-681 .cs-title {
+        font-size: var(--headerFontSize);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
+        color: var(--headerColor);
+        position: relative;
+    }
+    #why-choose-681 .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+    #why-choose-681 .cs-color {
+        color: var(--primary);
+    }
+    #why-choose-681 .cs-text {
+        margin-bottom: 1rem;
+    }
+    #why-choose-681 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #why-choose-681 .cs-ul {
+        width: 100%;
+        margin: 0 0 2rem 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    #why-choose-681 .cs-li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #why-choose-681 .cs-h3 {
+        font-size: 1.25rem;
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        color: var(--headerColor);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    #why-choose-681 .cs-icon {
+        width: 1.0625rem;
+        height: auto;
+        margin-top: 0.25rem;
+    }
+    #why-choose-681 .cs-item-text {
+        font-size: 0.875rem;
+        line-height: 1.5em;
+        text-align: left;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+   
+    #why-choose-681 .cs-graphic {
+        display: none;
+    }
+    #why-choose-681 .cs-image-group {
+        /* everything inside the image group is in ems so the font size will scale them down.  Font size minimum is tied to view width size, and grows until it reaches 75% of the value on em */
+        font-size: min(2.3vw, 0.75em);
+        width: 39.5em;
+        height: 51.25em;
+        position: relative;
+        z-index: 1;
+    }
+    #why-choose-681 .cs-picture {
+        width: 19.125em;
+        height: 22.5em;
+        overflow: hidden;
+        display: block;
+        position: absolute;
+    }
+    #why-choose-681 .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #why-choose-681 .cs-picture1 {
+        top: 5em;
+        left: 0;
+    }
+    #why-choose-681 .cs-picture2 {
+        top: 0;
+        right: 0;
+    }
+    #why-choose-681 .cs-picture3 {
+        bottom: 0;
+        left: 0;
+    }
+    #why-choose-681 .cs-picture4 {
+        bottom: 5em;
+        right: 0;
+    }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #why-choose-681 .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #why-choose-681 .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        flex: none;
+    }
+    #why-choose-681 .cs-graphic {
+        width: 61.4375em;
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: 10.3125em;
+        right: -2em;
+        z-index: -1;
+    }
+}
+
+                                
+</style>
+
+<section id="why-choose-681">
+    <div class="cs-container">
+        <!-- Left Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="/assets/images/2.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/2.jpg" alt="people outside" width="306" height="360">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="/assets/images/3.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/3.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/3.jpg" alt="people outside" width="306" height="360">
+            </picture>
+            <picture class="cs-picture cs-picture3">
+                <source media="(max-width: 600px)" srcset="/assets/images/4.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/4.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/4.jpg" alt="person gardening" width="306" height="360">
+            </picture>
+            <picture class="cs-picture cs-picture4">
+                <source media="(max-width: 600px)" srcset="/assets/images/5.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/5.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/5.jpg" alt="urban environment in green" width="306" height="360">
+            </picture>
+            <!--Zig Zag Graphic-->
+            <img class="cs-graphic" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fzigzag.svg" loading="lazy" decoding="async" alt="zigzag" width="983" height="416">
+        </div>
+        <div class="cs-content" data-aos="fade-up">
+            <span class="cs-topper">Why 8Fold Yoga?</span>
+            <h2 class="cs-title">A Studio Designed for <span class="cs-color">You</span></h2>
+            <p class="cs-text">
+                Located at 2321 Caniff, Hamtramck, MI 48212, our studio combines modern design with a warm, inviting atmosphere to inspire your practice.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <h3 class="cs-h3">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsquares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
+                        Vinyasa Flow
+                    </h3>
+                    <p class="cs-item-text">
+                        Build strength and fluidity with dynamic sequences.
+                    </p>
+                </li>
+                <li class="cs-li">
+                    <h3 class="cs-h3">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsquares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
+                        Restorative Yoga
+                    </h3>
+                    <p class="cs-item-text">
+                        Release stress and rejuvenate deeply.
+                    </p>
+                </li>
+                <li class="cs-li">
+                    <h3 class="cs-h3">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsquares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
+                        Yoga Foundations
+                    </h3>
+                    <p class="cs-item-text">
+                        Perfect for beginners or anyone refining their practice.
+                    </p>
+                </li>
+                <li class="cs-li">
+                    <h3 class="cs-h3">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsquares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
+                        Power Yoga
+                    </h3>
+                    <p class="cs-item-text">
+                        Challenge your body and mind with energizing flows.
+                    </p>
+                </li>
+            </ul>
+            <p class="cs-text">
+                Join a group of like-minded individuals who are here to grow, support, and thrive together. At 8Fold Yoga, you’re not just attending classes—you’re becoming part of something bigger.
+            </p>
+            
+            <a class="cs-button-solid" href="/book">Book a Class</a>
+        </div>
+    </div>
+</section>
+                                

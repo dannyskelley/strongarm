@@ -9,7 +9,7 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #E63946;
+    --primary: #E64829;
     --primaryLight: green;
     --secondary: #505B2E;
     --secondaryLight: #001f3f;
@@ -992,7 +992,7 @@
 @media only screen and (min-width: 0em) {
   #footer {
     background: #fff;
-    padding: 1.5rem 0 1.25rem;
+    padding: 4.5rem 0 1.25rem;
     font-size: min(4vw, 1.2em);
   }
   #footer .left-section {

@@ -1,0 +1,177 @@
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+
+<style>
+    /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbsr-1126 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+    }
+    #sbsr-1126 .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+    #sbsr-1126 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 32.625rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+
+    #sbsr-1126 .cs-topper {
+        color: #767676;
+    }
+    #sbsr-1126 .cs-text {
+        margin-bottom: 1rem;
+    }
+    #sbsr-1126 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #sbsr-1126 .cs-ul {
+        width: 100%;
+        margin: 0 0 2rem 0;
+        padding-left: 1.25rem;
+        /* prevents padding from affecting width and height */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    #sbsr-1126 .cs-li {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        max-width: 25rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+        position: relative;
+    }
+    #sbsr-1126 .cs-li:before {
+        /* bullet */
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: currentColor;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0.625rem;
+        left: -0.9375rem;
+    }
+   
+    #sbsr-1126 .cs-image-group {
+        /* scaling entire section down. font-size starts at a min in vw, and stops when that value reaches 1em (16px). Since we want the picture elements to base their font size on the parent and not the root, we use ems for this entire section  */
+        font-size: min(1.9vw, 0.64em);
+        width: 41.0625em;
+        height: 42.25em;
+        /* offset the amount the cs-graphic overflows the container so it stays centerd on mobile and tablet, removed at desktop */
+        margin-right: 6.75em;
+        position: relative;
+        z-index: 1;
+    }
+    #sbsr-1126 .cs-picture {
+        width: 41.0625em;
+        height: 42.25em;
+        overflow: hidden;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #sbsr-1126 .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #sbsr-1126 .cs-graphic {
+        width: 40.0625em;
+        height: auto;
+        position: absolute;
+        right: -6.75em;
+        top: 0;
+        z-index: -1;
+    }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbsr-1126 .cs-container {
+        max-width: 80rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #sbsr-1126 .cs-image-group {
+        /* reset the scale */
+        font-size: min(1.2vw, 1em);
+        margin: 0;
+        /* sends it to the right in the 2nd position */
+        order: 2;
+    }
+    #sbsr-1126 .cs-content {
+        width: 45%;
+        /* prevent flexbox from squishing it */
+        flex: none;
+    }
+}
+
+                                
+</style>
+
+<section id="sbsr-1126" >
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture cs-picture1" >
+                <source media="(max-width: 600px)" srcset="/assets/images/1.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/1.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/1.jpg" alt="person with box" width="657" height="676"  aria-hidden="true">
+            </picture>
+            <!--Circle Graphic-->
+            <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-shape.svg" alt="graphic" width="641" height="660" aria-hidden="true">
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content" data-aos="fade-up">
+            <span class="cs-topper">8 Fold Yoga</span>
+            <h2 class="cs-title">Your Yoga Community<BR> in Hamtramck</h2>
+            <p class="cs-text">
+                At 8Fold Yoga, we’re here to help you grow stronger, find balance, and connect with a vibrant community. Whether you’re a first-time yogi or an experienced practitioner, our studio is a welcoming space designed to meet you where you are.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">A modern, inspiring yoga studio in the heart of Hamtramck.</li>
+                <li class="cs-li">Classes for every level, from beginners to advanced yogis.</li>
+                <li class="cs-li">Skilled instructors passionate about guiding your practice.</li>
+                <li class="cs-li">A supportive community where everyone belongs.</li>
+            </ul>
+            
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="/book">Book a Class</a>
+        </div>
+    </div>
+</section>
+                                

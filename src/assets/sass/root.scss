@@ -10,7 +10,7 @@
 @media only screen and (min-width: 0em) {
     // Website colors
     :root {
-        --primary:  #E63946;
+        --primary:  #E64829;
         --primaryLight: green;
         --secondary: #505B2E;
         --secondaryLight: #001f3f;
@@ -1206,7 +1206,7 @@
 @media only screen and (min-width: 0em) {
     #footer {
         background: #fff;
-        padding: calc(24 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
+        padding: calc(24 / 16 * 3rem) 0 calc(20 / 16 * 1rem);
         font-size: min(4vw, 1.2em);
 
         .left-section {
