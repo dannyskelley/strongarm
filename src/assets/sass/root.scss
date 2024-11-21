@@ -10,7 +10,7 @@
 @media only screen and (min-width: 0em) {
     // Website colors
     :root {
-        --primary:  #F7DA5B;
+        --primary:  #D5781B;
         --primaryLight: green;
         --secondary: #505B2E;
         --secondaryLight: #001f3f;
@@ -51,10 +51,11 @@
         max-width: 43.75rem;
         font-size: var(--headerFontSize);
         line-height: 1.2em;
-        font-weight: 600;
+       
         color: var(--headerColor);
         text-align: inherit;
-        font-family: "Fanwood Text", Arial, sans-serif;
+        font-family: "Oswald";
+        font-weight: 700;
         
     }
 
@@ -193,13 +194,13 @@
 
     @font-face {
         font-style: normal;
-        font-family: "Fanwood Text";
-        font-weight: 100;
+        font-family: "Oswald";
+        font-weight: 700;
         font-display: swap;
         src: local(""),
-            url("/assets/fonts/fanwood-text-v15-latin-regular.woff2") format("woff2"),
+            url("/assets/fonts/oswald-v53-latin-700.woff2") format("woff2"),
             /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("/assets/fonts/fanwood-text-v15-latin-regular.woff2")
+                url("/assets/fonts/oswald-v53-latin-700.woff2")
                 format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 

@@ -189,13 +189,20 @@
 /* Large Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25rem) {
     #hero-997 {
-        background: url("/assets/images/homebg.jpg");
+        background: url("/assets/images/bg.jpg");
         background-size: cover;
-        background-position: center;
+        background-position: top right;
         background-repeat: no-repeat;
         /* creates parallax effect on background image */
         background-attachment: fixed;
         /* remove img tag so we can make parallax work */
+    }
+    #hero-997 {
+        /* 200px - 300px - leaving extra space for the navigation */
+        padding: clamp(.5rem, 5.95vw, 5.75rem) 1rem 0;
+        /* 100px - 250px */
+        padding-bottom: clamp(6.25rem, 25.95vw, 15.625rem);
+
     }
     #hero-997 .cs-background img {
         display: none;
@@ -208,7 +215,7 @@
         height: 100%;
         background: linear-gradient(
             41deg,
-            rgba(26, 26, 26, 0.5) 30%,
+            rgba(26, 26, 26, 0.8) 30%,
             rgba(26, 26, 26, 0.0) 100%
         );
         opacity: 1;
@@ -228,21 +235,21 @@
 <section id="hero-997">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Prince Electric</span>
-            <h1 class="cs-title"><span class="cs-color">Trusted. </span>Skilled. Local.</h1>
+            <span class="cs-topper">Strong Arm PS LLC Detroit</span>
+            <h1 class="cs-title"><span class="cs-color">Your Safety,<BR> Our Priority<BR></span> Secure Your Home and Business Today</h1>
             <p class="cs-text">
-                Your partner for safe, reliable electrical solutions in West Bloomfield Township and surrounding areas.            </p>
+                With Strong Arm Personal Security, experience peace of mind knowing your loved ones and assets are protected by experts in Detroit           </p>
             <div class="cs-button-box">
-                <a href="" class="cs-button-solid">Call Now</a>
+                <a href="" class="cs-button-solid">Get Protection Now</a>
                 <!--<a href="" class="cs-button-transparent">Learn More</a>-->
             </div>
         </div>
     </div>
     <!-- Background Image -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="/assets/images/homebg.jpg">
-        <source media="(min-width: 601px)" srcset="/assets/images/homebg.jpg">
-        <img loading="lazy" decoding="async" src="/assets/images/homebg.jpg" alt="restaurant" width="1920" height="1200" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="/assets/images/bg.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/bg.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/bg.jpg" alt="restaurant" width="1920" height="1200" aria-hidden="true">
     </picture>
 </section>
                                 
