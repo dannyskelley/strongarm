@@ -1,273 +1,192 @@
 <!-- ============================================ -->
-<!--                 Why Choose Us                -->
+<!--                   Services                   -->
 <!-- ============================================ -->
 
-
-<style>
-    /*-- -------------------------- -->
-<---        Why Choose Us       -->
+<STYLE>
+  /*-- -------------------------- -->
+<---          Services          -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #why-choose-1710 {
-    /* moved padding to the container so the cs-picture can be full width */
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-  }
-  #why-choose-1710 .cs-topper {background-color: black; padding: 10px; margin-bottom: 20px;}
-  #why-choose-1710 .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    /* moved to container instead of section, moves back to the section container at tablet */
+  #services-1684 {
     padding: var(--sectionPadding);
-    box-sizing: border-box;
+  }
+  #services-1684 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* 40px - 64px */
-    gap: clamp(2.5rem, 3.9vw, 4rem);
-    position: relative;
-    z-index: 1;
+    /* 48px - 64px */
+    
   }
-  #why-choose-1710 .cs-container:before {
-    /* light grey background overlay */
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #f7f7f7;
-    opacity: 1;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #why-choose-1710 .cs-content {
+  #services-1684 .cs-content {
+    /* set text align to center if content needs to be centrally aligned */
     text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
+    /* left aligns the content, center the content by using 'center' */
     align-items: flex-start;
   }
-  #why-choose-1710 .cs-title {
-    margin: 0;
-    max-width: 23ch;
+  #services-1684 .cs-text {
+    max-width: none;
   }
-  #why-choose-1710 .cs-wrapper {
+  #services-1684 .cs-card-group {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* 16px - 32px */
-    gap: clamp(1rem, 3.2vw, 2rem);
-  }
-  #why-choose-1710 .cs-card-group {
-    width: 100%;
+    margin: 0 auto;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    /* 16px - 32px */
-    gap: clamp(1rem, 2vw, 2rem);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: row;
+    gap: 1.75rem;
   }
-  #why-choose-1710 .cs-item {
+  #services-1684 .cs-item {
     list-style: none;
-    /* prevents padding from affecting height and width */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  #why-choose-1710 .cs-item-wrapper {
     width: 100%;
+    margin: 0 auto;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--primary);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    justify-content: flex-start;
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s, border-color 0.3s;
   }
-  #why-choose-1710 .cs-item-number {
-    font-size: 1.25rem;
+  #services-1684 .cs-item:hover .cs-h3,
+  #services-1684 .cs-item:hover .cs-link {
+    color: var(--primary);
+  }
+  #services-1684 .cs-item:hover .cs-arrow {
+    filter: initial;
+  }
+  #services-1684 .cs-item:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  #services-1684 .cs-h3 {
+    /* 20px - 31px */
+    font-size: clamp(1.25rem, 2vw, 1.9375rem);
+    font-weight: bold;
     line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #services-1684 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #services-1684 .cs-link {
+    font-size: 1rem;
     font-weight: 700;
-    margin: 0;
+    line-height: 1.2em;
+    text-align: inherit;
+    text-decoration: none;
+    margin-top: auto;
     color: var(--primary);
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 0.5rem;
-    background-color: black;
-    border-radius: 0px;
-    padding: 10px;
+    gap: 0.625rem;
+    transition: color 0.3s;
   }
-  #why-choose-1710 .cs-h3 {
-    font-size: 1.25rem;
-    line-height: 1.2em;
-    font-weight: 700;
-    margin: 0;
-    color: var(--headerColor);
+  #services-1684 .cs-link:hover .cs-arrow {
+    transform: translateX(0.25rem);
   }
-  #why-choose-1710 .cs-item-text {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin: 0;
-    color: var(--bodyTextColor);
+  #services-1684 .cs-link-text {
+    width: fit-content;
   }
-  #why-choose-1710 .cs-picture {
-    width: 100%;
-    max-width: 80rem;
-    /* 340px - 620px */
-    height: clamp(21.25rem, 47vw, 38.75rem);
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    /* clips the img from overflowing the container on hover */
-    overflow: hidden;
-  }
-  #why-choose-1710 .cs-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #why-choose-1710 .cs-floater {
-    /* 246px - 582px */
-    width: clamp(15.375rem, 50vw, 36.375rem);
+  #services-1684 .cs-arrow {
+    width: 1.25rem;
     height: auto;
-    position: absolute;
-    right: -4rem;
-    top: -0.5rem;
-    z-index: -1;
+    display: block;
+    transition: filter 0.3s, transform 0.3s;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #why-choose-1710 {
-    padding: var(--sectionPadding);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 60px - 100px */
-    gap: clamp(3.75rem, 3.9vw, 6.25rem);
+  #services-1684 .cs-container {
+    max-width: 80rem;
   }
-  #why-choose-1710 .cs-container {
+  #services-1684 .cs-card-group {
+    /* 20px - 32px */
+    gap: clamp(1.25rem, 3vw, 2rem);
+  }
+  #services-1684 .cs-item {
     padding: 0;
-  }
-  #why-choose-1710 .cs-container:before {
-    width: 130vw;
-    height: 180%;
-    top: -9.375rem;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #why-choose-1710 .cs-wrapper {
-    flex-direction: row;
-    align-items: flex-start;
+    /* 20px - 32px */
+    padding-left: clamp(1.25rem, 3vw, 2rem);
+    border: none;
+    border-left: 1px solid var(--primary);
+    grid-column: span 4;
   }
 }
                                 
-</style>
+</STYLE>
 
-<section id="why-choose-1710">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Why Choose</span>
-            <h2 class="cs-title">Exceptional Service Backed by 30+ Years of Experience</h2>
-        </div>
-        <div class="cs-wrapper">
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <span class="cs-item-number">01</span>
-                    <div class="cs-item-wrapper">
-                        <h3 class="cs-h3">30+ Years of Expertise</h3>
-                        <p class="cs-item-text">
-                            Decades of experience in residential and commercial electrical work.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <span class="cs-item-number">02</span>
-                    <div class="cs-item-wrapper">
-                        <h3 class="cs-h3">Licensed & Insured</h3>
-                        <p class="cs-item-text">
-                            Fully certified as a Master Electrician and Electrical Contractor for your peace of mind.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <span class="cs-item-number">03</span>
-                    <div class="cs-item-wrapper">
-                        <h3 class="cs-h3">Fair Pricing, Exceptional Quality</h3>
-                        <p class="cs-item-text">
-                            Our rates reflect the value of skilled, high-quality work that prioritizes safety and durability.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <span class="cs-item-number">04</span>
-                    <div class="cs-item-wrapper">
-                        <h3 class="cs-h3">Recognized for Trust</h3>
-                        <p class="cs-item-text">
-                            Proudly voted as a 2024 Neighborhood Fave on Nextdoor, reflecting our commitment to exceptional service.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <span class="cs-item-number">05</span>
-                    <div class="cs-item-wrapper">
-                        <h3 class="cs-h3">Customer-Focused Integrity</h3>
-                        <p class="cs-item-text">
-                            We build long-term relationships with clients who value trusted, reliable service.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <span class="cs-item-number">06</span>
-                    <div class="cs-item-wrapper">
-                        <h3 class="cs-h3">Seamless Service Process</h3>
-                        <p class="cs-item-text">
-                            From consultation to completion, we ensure clear communication and flawless results.
-                        </p>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <span class="cs-item-number">07</span>
-                    <div class="cs-item-wrapper">
-                        <h3 class="cs-h3">A Trusted Local Partner</h3>
-                        <p class="cs-item-text">
-                            Serving West Bloomfield Township and nearby areas with dedication and care.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+<section id="services-1684">
+  <div class="cs-container">
+    <div class="cs-content">
+        <span class="cs-topper" >Our Services</span>
+        <h2 class="cs-title">Protect What Matters Most With Strong Arm Personal Security</h2>
+        <p class="cs-text">
+            We are a trusted security company based in Monroe, MI, serving the entire Metro Detroit area.<BR><BR>We provide expert-level:
+        </p>
     </div>
-    
-        <!---SVG Graphic-->
-        <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/diagnol-ovals.svg" alt="graphic" loading="lazy" decoding="async" height="710" aria-hidden="true" width="690">
-    </div>
-    <picture class="cs-picture">
-        <source media="(min-width: 1024px)"
-                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting14.jpg">
-        <source media="(min-width: 601px)"
-                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting14.jpg">
-        <source media="(max-width: 600px)"
-                srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting14.jpg">
-        <img aria-hidden="true" loading="lazy" decoding="async"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting14.jpg"
-                alt="meeting" width="1280" height="620">
-    </picture>
+    <ul class="cs-card-group" style="margin-top:30px;">
+        <li class="cs-item">
+            <h3 class="cs-h3">Personal Protection Services</h3>
+            <p class="cs-item-text">
+                Professional bodyguard services to safeguard individuals and families.
+            </p>
+            <a href="#" class="cs-link">
+                <span class="cs-link-text">Get Started</span>
+                <img class="cs-arrow" loading="lazy" decoding="async"
+                     src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                     alt="icon" width="20" height="20" aria-hidden="true" />
+            </a>
+        </li>
+        <li class="cs-item">
+            <h3 class="cs-h3">Business Security Solutions</h3>
+            <p class="cs-item-text">
+                Ensure your employees, customers, and assets are protected.
+            </p>
+            <a href="#" class="cs-link">
+                <span class="cs-link-text">Get Started</span>
+                <img class="cs-arrow" loading="lazy" decoding="async"
+                     src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                     alt="icon" width="20" height="20" aria-hidden="true" />
+            </a>
+        </li>
+        <li class="cs-item">
+            <h3 class="cs-h3">Event Security</h3>
+            <p class="cs-item-text">
+                From private parties to corporate gatherings, we handle security logistics so you can focus on what matters.
+            </p>
+            <a href="#" class="cs-link">
+                <span class="cs-link-text">Get Started</span>
+                <img class="cs-arrow" loading="lazy" decoding="async"
+                     src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                     alt="icon" width="20" height="20" aria-hidden="true" />
+            </a>
+        </li>
+    </ul>
+
+</div>
+
 </section>
-                                
+                              

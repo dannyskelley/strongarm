@@ -84,7 +84,7 @@
         line-height: calc(50 / 16 * 1em);
         font-weight: bold;
         // Transition Properties
-        color: black;
+        color: white;
         
         text-align: center;
 
@@ -925,13 +925,13 @@
 
             &:before {
                 position: absolute;
-                bottom: -20px;
+                bottom: -10px;
                 left: 0;
                 /* active state underline */
                 content: "";
                 opacity: 1;
                 display: block;
-                background: white;
+                background: var(--primary);
                 height: 5px;
                 width: 0%;
                 transition: width 0.3s;

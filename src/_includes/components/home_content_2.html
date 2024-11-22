@@ -1,19 +1,44 @@
 <!-- ============================================ -->
-<!--                 Why Choose Us                -->
+<!--                 Why Choose                   -->
 <!-- ============================================ -->
 
 <style>
     /*-- -------------------------- -->
-<---       Why Choose Us        -->
+<---        Why Choose          -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #why-choose-681 {
-        padding: var(--sectionPadding);
-        background-color: #fafafa;
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-2rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
     }
-    #why-choose-681 .cs-container {
+    @keyframes floatAnimation2 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-3rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    #why-choose-1371 {
+        padding: var(--sectionPadding);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background-color: black;
+    }
+    #why-choose-1371 .cs-container {
         width: 100%;
         max-width: 80rem;
         margin: auto;
@@ -23,17 +48,16 @@
         /* 48px - 64px */
         gap: clamp(3rem, 6vw, 4rem);
     }
-    #why-choose-681 .cs-content {
+    #why-choose-1371 .cs-content {
         /* set text align to left if content needs to be left aligned */
-        text-align: left;
+        text-align: center;
         width: 100%;
-        max-width: 33.875rem;
         display: flex;
         flex-direction: column;
         /* centers content horizontally, set to flex-start to left align */
-        align-items: flex-start;
+        align-items: center;
     }
-    #why-choose-681 .cs-topper {
+    #why-choose-1371 .cs-topper {
         font-size: var(--topperFontSize);
         line-height: 1.2em;
         text-transform: uppercase;
@@ -44,17 +68,17 @@
         margin-bottom: 0.25rem;
         display: block;
     }
-    #why-choose-681 .cs-title {
+    #why-choose-1371 .cs-title {
         font-size: var(--headerFontSize);
         font-weight: 900;
         line-height: 1.2em;
         text-align: inherit;
         max-width: 43.75rem;
         margin: 0 0 1rem 0;
-        color: var(--headerColor);
+        color: white;
         position: relative;
     }
-    #why-choose-681 .cs-text {
+    #why-choose-1371 .cs-text {
         font-size: var(--bodyFontSize);
         line-height: 1.5em;
         text-align: inherit;
@@ -63,197 +87,326 @@
         margin: 0;
         color: var(--bodyTextColor);
     }
-    #why-choose-681 .cs-color {
-        color: var(--primary);
+    #why-choose-1371 .cs-title {
+        max-width: 23ch;
     }
-    #why-choose-681 .cs-text {
+    #why-choose-1371 .cs-text {
+        max-width: 52.5rem;
         margin-bottom: 1rem;
     }
-    #why-choose-681 .cs-text:last-of-type {
-        margin-bottom: 2rem;
+    #why-choose-1371 .cs-text:last-of-type {
+        margin-bottom: 0rem;
     }
-    #why-choose-681 .cs-ul {
-        width: 100%;
-        margin: 0 0 2rem 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
+    #why-choose-1371 .cs-text strong {
+        color: var(--headerColor);
     }
-    #why-choose-681 .cs-li {
+    #why-choose-1371 .cs-item-picture {
         list-style: none;
+        width: 100%;
+        grid-column: span 12;
+        position: relative;
+    }
+    #why-choose-1371 .cs-picture {
+        width: 100%;
+        height: 26.125rem;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    #why-choose-1371 .cs-picture img {
+        width: 100%;
+        height: 100%;
+      
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #why-choose-1371 .cs-card-group {
+        width: 100%;
         margin: 0;
         padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: stretch6;
+        gap: clamp(1rem, 2vw, 1.25rem);
     }
-    #why-choose-681 .cs-h3 {
+    #why-choose-1371 .cs-item {
+        list-style: none;
+        /* 16px - 24px */
+        padding: clamp(1rem, 3vw, 1.5rem);
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        border-radius: 1rem;
+        border: 1px solid #e8e8e8;
+        display: flex;
+        grid-column: span 12;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        transition: background-color 0.3s;
+    }
+    #why-choose-1371 .cs-item:hover {
+        background-color: var(--primary);
+    }
+    #why-choose-1371 .cs-item:hover .cs-h3,
+    #why-choose-1371 .cs-item:hover .cs-item-text {
+        color: var(--bodyTextColorWhite);
+    }
+    #why-choose-1371 .cs-item:hover .cs-item-text {
+        opacity: 0.8;
+    }
+    #why-choose-1371 .cs-item:hover .cs-h3-icon {
+        filter: grayscale(1) brightness(1000%);
+    }
+    #why-choose-1371 .cs-h3 {
         font-size: 1.25rem;
         line-height: 1.2em;
         font-weight: 700;
-        margin: 0 0 0.5rem 0;
+        margin: 0;
         color: var(--headerColor);
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 0.75rem;
+        gap: 0.5rem;
+        transition: color 0.3s;
     }
-    #why-choose-681 .cs-icon {
-        width: 1.0625rem;
+    #why-choose-1371 .cs-h3-icon {
+        width: 1.5rem;
         height: auto;
-        margin-top: 0.25rem;
+        margin-top: 2px;
+        display: block;
     }
-    #why-choose-681 .cs-item-text {
+    #why-choose-1371 .cs-item-text {
         font-size: 0.875rem;
         line-height: 1.5em;
-        text-align: left;
         margin: 0;
         color: var(--bodyTextColor);
+        transition:
+            color 0.3s,
+            opacity 0.3s;
     }
    
-    #why-choose-681 .cs-graphic {
-        display: none;
+   
+    #why-choose-1371 .cs-bubbles1 {
+        width: 26.1875rem;
+        height: 26.6875rem;
+        position: absolute;
+        left: -16.25rem;
+        top: -15rem;
+        z-index: -1;
     }
-    #why-choose-681 .cs-image-group {
-        /* everything inside the image group is in ems so the font size will scale them down.  Font size minimum is tied to view width size, and grows until it reaches 75% of the value on em */
-        font-size: min(2.3vw, 0.75em);
-        width: 39.5em;
-        height: 51.25em;
-        position: relative;
-        z-index: 1;
+    #why-choose-1371 .cs-bubbles1:before {
+        /* white border bubble */
+        content: "";
+        width: 20.625rem;
+        height: 20.625rem;
+        background: transparent;
+        border: 1px solid #1a1a1a;
+        border-radius: 50%;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        animation-name: floatAnimation;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
     }
-    #why-choose-681 .cs-picture {
-        width: 19.125em;
-        height: 22.5em;
-        overflow: hidden;
+    #why-choose-1371 .cs-bubbles1:after {
+        /* orange bubble */
+        content: "";
+        width: 16.25rem;
+        height: 16.25rem;
+        background: var(--primary);
+        opacity: 0.1;
+        border-radius: 50%;
         display: block;
         position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        animation-name: floatAnimation2;
+        animation-duration: 14s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
     }
-    #why-choose-681 .cs-picture img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    #why-choose-1371 .cs-bubbles2 {
+        width: 26.1875rem;
+        height: 26.6875rem;
+        display: block;
         position: absolute;
-        top: 0;
-        left: 0;
+        /* changes to 160px at larger desktop */
+        right: -11.25rem;
+        bottom: -8.75rem;
+        z-index: -1;
     }
-    #why-choose-681 .cs-picture1 {
-        top: 5em;
-        left: 0;
-    }
-    #why-choose-681 .cs-picture2 {
+    #why-choose-1371 .cs-bubbles2:before {
+        /* white border bubble */
+        content: "";
+        width: 20.625rem;
+        height: 20.625rem;
+        background: transparent;
+        border: 1px solid #1a1a1a;
+        border-radius: 50%;
+        opacity: 1;
+        position: absolute;
+        display: block;
         top: 0;
         right: 0;
+        animation-name: floatAnimation;
+        animation-duration: 7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
     }
-    #why-choose-681 .cs-picture3 {
+    #why-choose-1371 .cs-bubbles2:after {
+        /* orange bubble */
+        content: "";
+        width: 16.25rem;
+        height: 16.25rem;
+        background: var(--primary);
+        opacity: 0.1;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
         bottom: 0;
         left: 0;
+        z-index: -1;
+        animation-name: floatAnimation2;
+        animation-duration: 9s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
     }
-    #why-choose-681 .cs-picture4 {
-        bottom: 5em;
-        right: 0;
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #why-choose-1371 .cs-item {
+        grid-column: span 4;
     }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #why-choose-681 .cs-container {
-        flex-direction: row;
-        justify-content: space-between;
+    #why-choose-1371 .cs-item-picture {
+        grid-column: 4 / span 6;
+        grid-row: 1 / span 3;
     }
-    #why-choose-681 .cs-image-group {
-        font-size: min(1.2vw, 1em);
-        flex: none;
+    #why-choose-1371 .cs-picture {
+        height: 100%;
     }
-    #why-choose-681 .cs-graphic {
-        width: 61.4375em;
-        height: auto;
-        display: block;
-        position: absolute;
-        bottom: 10.3125em;
-        right: -2em;
-        z-index: -1;
+    #why-choose-1371 .cs-item {
+        grid-column: span 3;
+    }
+    #why-choose-1371 .cs-item:nth-of-type(1) {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 1;
+    }
+    #why-choose-1371 .cs-item:nth-of-type(2) {
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 1;
+    }
+    #why-choose-1371 .cs-item:nth-of-type(3) {
+        grid-column: 1 / span 3;
+        grid-row: 3 / span 1;
+    }
+    #why-choose-1371 .cs-item:nth-of-type(5) {
+        grid-column: 10 / span 3;
+        grid-row: 1 / span 1;
+    }
+    #why-choose-1371 .cs-item:nth-of-type(6) {
+        grid-column: 10 / span 3;
+        grid-row: 2 / span 1;
+    }
+    #why-choose-1371 .cs-item:nth-of-type(7) {
+        grid-column: 10 / span 3;
+        grid-row: 3 / span 1;
+    }
+    #why-choose-1371 .cs-bubbles1 {
+        left: -8.125rem;
+        top: -9.375rem;
+    }
+}
+/* Large Desktop 1600px */
+@media only screen and (min-width: 100rem) {
+    #why-choose-1371 .cs-bubbles1 {
+        margin-right: 40.625rem;
+        left: auto;
+        right: 50%;
+    }
+    #why-choose-1371 .cs-bubbles2 {
+        margin-left: 37.5rem;
+        left: 50%;
+        right: auto;
     }
 }
 
                                 
 </style>
 
-<section id="why-choose-681">
+<section id="why-choose-1371">
     <div class="cs-container">
-        <!-- Left Section -->
-        <div class="cs-image-group">
-            <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="/assets/images/2.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/2.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/2.jpg" alt="people outside" width="306" height="360">
-            </picture>
-            <picture class="cs-picture cs-picture2">
-                <source media="(max-width: 600px)" srcset="/assets/images/3.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/3.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/3.jpg" alt="people outside" width="306" height="360">
-            </picture>
-            <picture class="cs-picture cs-picture3">
-                <source media="(max-width: 600px)" srcset="/assets/images/4.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/4.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/4.jpg" alt="person gardening" width="306" height="360">
-            </picture>
-            <picture class="cs-picture cs-picture4">
-                <source media="(max-width: 600px)" srcset="/assets/images/5.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/5.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/5.jpg" alt="urban environment in green" width="306" height="360">
-            </picture>
-            <!--Zig Zag Graphic-->
-            <img class="cs-graphic" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fzigzag.svg" loading="lazy" decoding="async" alt="zigzag" width="983" height="416">
+        <div class="cs-content">
+            <span class="cs-topper" data-aos="fade-up">Why Choose Us</span>
+            <h2 class="cs-title">Why Clients Trust Strong Arm Personal Security
+            </h2>
+
         </div>
-        <div class="cs-content" data-aos="fade-up">
-            <span class="cs-topper">Why 8Fold Yoga?</span>
-            <h2 class="cs-title">A Studio Designed<BR> for <span class="cs-color">You</span></h2>
-            <p class="cs-text">
-                Located at 2321 Caniff, Hamtramck, MI 48212, our studio combines modern design with a warm, inviting atmosphere to inspire your practice.
-            </p>
-            <ul class="cs-ul">
-                <li class="cs-li">
-                    <h3 class="cs-h3">
-                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsquares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
-                        Vinyasa Flow
-                    </h3>
-                    <p class="cs-item-text">
-                        Build strength and fluidity with dynamic sequences.
-                    </p>
-                </li>
-                <li class="cs-li">
-                    <h3 class="cs-h3">
-                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsquares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
-                        Restorative Yoga
-                    </h3>
-                    <p class="cs-item-text">
-                        Release stress and rejuvenate deeply.
-                    </p>
-                </li>
-                <li class="cs-li">
-                    <h3 class="cs-h3">
-                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsquares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
-                        Yoga Foundations
-                    </h3>
-                    <p class="cs-item-text">
-                        Perfect for beginners or anyone refining their practice.
-                    </p>
-                </li>
-                <li class="cs-li">
-                    <h3 class="cs-h3">
-                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsquares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
-                        Power Yoga
-                    </h3>
-                    <p class="cs-item-text">
-                        Challenge your body and mind with energizing flows.
-                    </p>
-                </li>
-            </ul>
-            <p class="cs-text">
-                Join a group of like-minded individuals who are here to grow, support, and thrive together. At 8Fold Yoga, you’re not just attending classes—you’re becoming part of something bigger.
-            </p>
+        <ul class="cs-card-group" >
+            <li class="cs-item" >
+                <h3 class="cs-title" style="color: black;">
+                            Local Expertise
+                </h3>
+                <p class="cs-item-text">
+                    Serving Monroe, MI, and Metro Detroit, we understand the specific security needs of our community.
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-title" style="color: black;">
+                    Trained Professionals 
+                </h3>
+                <p class="cs-item-text">
+                    Our team consists of skilled security experts dedicated to keeping you safe.
+
+                </p>
+            </li>
             
-            <a class="cs-button-solid" href="/book">Book a Class</a>
-        </div>
+
+            <li class="cs-item-picture" style="background-color: black;">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/logo2.svg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/logo2.svg">
+                    <img loading="lazy" decoding="async" src="/assets/images/logo2.svg" alt="people" width="590" height="418">
+                </picture>
+                <li class="cs-item">
+                    <h3 class="cs-title" style="color: black;">
+                        Custom Solutions
+                    </h3>
+                    <p class="cs-item-text">
+                        No two clients are alike. We create tailored plans for maximum safety.
+                    </p>
+                </li>
+                
+                <li class="cs-item">
+                    <h3 class="cs-title" style="color: black;">
+                        Proven Track Record
+                    </h3>
+                    <p class="cs-item-text">
+                        From small businesses to high-profile individuals, we’ve successfully protected countless clients.
+                    </p>
+                </li>
+                
+
+        </ul>
+        <a href="" class="cs-button-solid">Call Us Now</a>
     </div>
+
 </section>
                                 

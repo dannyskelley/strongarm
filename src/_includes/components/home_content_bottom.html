@@ -1,0 +1,149 @@
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+<style>
+    /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-1592 {
+    padding: var(--sectionPadding);
+  }
+  #sbsr-1592 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbsr-1592 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 36.625rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-1592 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbsr-1592 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  
+  #sbsr-1592 .cs-image-group {
+    /* scales the whole group based on the view width size and stop when that vales equals .745em, resets at desktop */
+    font-size: min(1.959vw, .745em);
+    width: 39.375em;
+    /* we set a minimum height so it never gets smaller than this value */
+    min-height: 39.25em;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-1592 .cs-picture {
+    position: absolute;
+  }
+  #sbsr-1592 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbsr-1592 .cs-picture1 {
+    /* the percentage heights allow them to be responsive to the height of the parent cs-image-group. On desktop, when the felxbox is set to aling-items: stretch, the cs-image group will stretch to fill the height of the parent container. So when you add more content to the cs-content group and make it taller, the cs-image group will get taller with it and every image will stretch with the parent, making this entire group responsive to the changing amounts of content next to it */
+    width: 25.8125em;
+    height: 79.617834%;
+    top: 0;
+    right: 0;
+    z-index:-1;
+  }
+  #sbsr-1592 .cs-picture2 {
+    width: 15.8125em;
+    min-height: 44.585987%;
+    object-fit: none;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: black;
+    border-radius:9px;
+    outline:5px solid black
+    
+  }
+  #sbsr-1592 .cs-picture2:before {
+  background: none;
+outline: 5px solid #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  pointer-events: none;
+  border-radius: 9px;
+}
+}
+/* Tablet 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-1592 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #sbsr-1592 .cs-content {
+    /* this padding sets a minimum gap between the top and bottom of the content div and the top and bottom of the cs-image-group */
+    padding: 3.75rem 0;
+    /* while the cs-image-group will stretch to fill the height of the parent, this property will ensure that the cs-content group aligns itse;f in the center of the parent div instead of stretching */
+    align-self: center;
+  }
+  #sbsr-1592 .cs-image-group {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+}
+                                
+</style>
+<section id="sbsr-1592">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Top left image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/home2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/home2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/home2.jpg" alt="mechanic" width="413" height="500">
+            </picture>
+            <!--Top Right image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/logo2.svg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/logo2.svg">
+                <img loading="lazy" decoding="async" src="/assets/images/logo2.svg" alt="mechanic" width="413" height="280">
+            </picture>
+        </div>
+        <div class="cs-content">
+            
+            <h2 class="cs-title">Don’t Leave Your Safety<BR>to Chance</h2>
+            <p class="cs-text">
+                Whether you need event security, a personal bodyguard, or full-scale business protection, Strong Arm Personal Security is your trusted partner in safety. Contact us today to learn how we can safeguard what matters most.            </p>
+            <a href="" class="cs-button-solid">Get Protection Now</a>
+        </div>
+    </div>
+</section>
+                                

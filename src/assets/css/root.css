@@ -71,7 +71,7 @@
     font-size: 1rem;
     line-height: 3.125em;
     font-weight: bold;
-    color: black;
+    color: white;
     text-align: center;
   }
   .cs-button-solid:hover {
@@ -752,13 +752,13 @@
   }
   #cs-navigation .cs-li-link:before {
     position: absolute;
-    bottom: -20px;
+    bottom: -10px;
     left: 0;
     /* active state underline */
     content: "";
     opacity: 1;
     display: block;
-    background: white;
+    background: var(--primary);
     height: 5px;
     width: 0%;
     transition: width 0.3s;

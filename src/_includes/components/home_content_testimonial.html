@@ -2,6 +2,7 @@
 <!--                   Reviews                    -->
 <!-- ============================================ -->
 
+
 <style>
     /*-- -------------------------- -->
 <---          Reviews           -->
@@ -9,160 +10,125 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #reviews-211 {
+    #reviews-508 {
         padding: var(--sectionPadding);
     }
-    #reviews-211 .cs-container {
+    #reviews-508 .cs-container {
         width: 100%;
-        /* changes to 1280px at tablet*/
+        /* changes to 1280px at tablet */
         max-width: 34.375rem;
         margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
     }
-    #reviews-211 .cs-picture {
-        width: 100%;
-        /* 200px - 304px */
-        height: clamp(12.5rem, 23.45vw, 19rem);
-        display: block;
-        position: relative;
-    }
-    #reviews-211 .cs-picture img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-    #reviews-211 .cs-card {
-        max-width: 39.375rem;
-    }
-    #reviews-211 .cs-content {
+    #reviews-508 .cs-content {
         /* set text align to left if content needs to be left aligned */
         text-align: left;
         width: 100%;
-        /* Padding top & bottom 40px - 80px */
-        /* Padding left & right 32px - 72px */
-        padding: clamp(2.5rem, 5.8vw, 5rem) clamp(2rem, 5.8vw, 4.5rem);
-        /* prevents padding and border from affecting height and width */
-        box-sizing: border-box;
-        background: #00715D;
+        max-width: 32.625rem;
         display: flex;
         flex-direction: column;
         /* centers content horizontally, set to flex-start to left align */
         align-items: flex-start;
     }
 
-    #reviews-211 .cs-title,
-    #reviews-211 .cs-topper {
-        color: var(--bodyTextColorWhite);
-    }
-    #reviews-211 .cs-text {
-        color: var(--bodyTextColorWhite);
+    #reviews-508 .cs-text {
         margin-bottom: 1rem;
     }
-    #reviews-211 .cs-text:last-of-type {
+    #reviews-508 .cs-text:last-of-type {
         margin-bottom: 2rem;
     }
-    
-    #reviews-211 .cs-review {
-        /* padding left & right 32px - 80px */
-        padding: 2.5rem clamp(2rem, 6vw, 5rem);
-        box-shadow: -1px 21px 39px 0px rgba(0, 0, 0, 0.06);
+   
+    #reviews-508 .cs-review {
+        width: 100%;
+        max-width: 39.5rem;
+        /* 24px - 60px top & bottom */
+        /* 16px - 60px left & right */
+        padding: clamp(1.5rem, 5.8vw, 3.75rem) clamp(1rem, 5vw, 3.75rem);
+        border: 1px solid #f1f1f4;
+        /* prevents padding from affecting width & height */
+        box-sizing: border-box;
         display: flex;
-        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
-        justify-content: center;
+        flex-wrap: wrap;
     }
-    #reviews-211 .cs-review-img {
-        width: 7rem;
-        height: 1.25rem;
-        display: block;
-        /* margin-bottom 8px - 12px */
-        margin: 0 auto clamp(0.5rem, 2vw, 0.75rem);
-    }
-    #reviews-211 .cs-review-title {
-        /* 25px - 31px */
-        font-size: clamp(1.5625rem, 3.1vw, 1.9375rem);
-        line-height: 1.2em;
-        text-align: center;
-        font-weight: bold;
-        /* margin-bottom 24px - 32px */
-        margin: 0 auto clamp(1.5rem, 4.2vw, 2rem);
-        color: var(--headerColor);
-        display: block;
-    }
-    #reviews-211 .cs-review-p {
+    #reviews-508 .cs-review-p {
         /* 16px - 20px */
-        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
         line-height: 1.5em;
-        text-align: center;
-        max-width: 27.125rem;
-        /* margin-bottom 24px - 32px */
-        margin: 0 auto clamp(1.5rem, 4.2vw, 2rem);
+        width: 100%;
+        /* 16px - 32px */
+        margin: 0 0 clamp(1rem, 3vw, 2rem) 0;
         color: var(--bodyTextColor);
     }
-    #reviews-211 .cs-review-name {
-        /* 16px - 20px */
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        line-height: 1.5em;
-        text-align: center;
-        margin: 0;
+    #reviews-508 .cs-info {
+        display: inline-block;
+    }
+    #reviews-508 .cs-profile {
+        width: 3.75rem;
+        height: auto;
+        margin-right: 1.25rem;
+        border-radius: 50%;
         display: block;
-        color: var(--headerColor);
+    }
+    #reviews-508 .cs-name {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        line-height: 1.5em;
         font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--headerColor);
+        display: block;
+    }
+    #reviews-508 .cs-location {
+        /* 13px - 16px */
+        font-size: clamp(0.8125rem, 1.5vw, 1rem);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--headerColor);
+        display: block;
     }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #reviews-211 .cs-container {
+    #reviews-508 .cs-container {
         max-width: 80rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: -1px 21px 39px 0px rgba(0, 0, 0, 0.06);
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
     }
-    #reviews-211 .cs-card {
-        /* prevents it from being squished by flexbox */
-        flex: none;
-        width: 44.8vw;
-    }
-    #reviews-211 .cs-review {
-        box-shadow: none;
-        width: 50%;
+    #reviews-508 .cs-review {
+        width: 73%;
     }
 }
 
                                 
 </style>
 
-<section id="reviews-211" data-aos="fade-up">
+<section id="reviews-508">
     <div class="cs-container">
-        <!-- Left section -->
-        <div class="cs-card">
-            <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="/assets/images/bg.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/bg.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/bg.jpg" alt="man at dentist" width="328" height="200" aria-hidden="true">
-                </picture>
-                <div class="cs-content">
-                <span class="cs-topper">Hear from our Yogis</span>
-                <h2 class="cs-title">What People Are Saying</h2>
-                <!--<p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet commodo, proin diam erat. Quis lectus faucibus ac velit consectetur nunc, lorem. Nibh eu fermentum, nullam cursus tortor augue at. 
-                </p>-->
-              
-                </div>
-        </div>
-        <!-- Right Section -->
-        <div class="cs-review">
-            <img class="cs-review-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg" alt="5 stars" width="112" height="20">
-            <span class="cs-title" style="color:black; text-align: center;">Everything I’ve been looking for</span>
-            <p class="cs-review-p">
-                8Fold Yoga in Hamtramck is everything I’ve been looking for. The studio is beautiful, the instructors are amazing, and the community is so welcoming!
+        <div class="cs-content">
+            <span class="cs-topper" data-aos="fade-up">Feedback</span>
+            <h2 class="cs-title">What Our Clients Say About Us</h2>
+            <p class="cs-text">
+                At Strong Arm Personal Security, we know how important it is to feel safe and protected. That’s why we provide tailored security services for individuals, businesses, and events in Monroe, MI, and Metro Detroit. Our trained professionals specialize in personal protection, business security, and event safety, ensuring your peace of mind every step of the way. Don’t leave your safety to chance—partner with experts who are committed to keeping you and your assets secure.
             </p>
-            <span class="cs-review-name">⎯ Marie-Claire</span>
-
-            <a style="margin-top:50px" href="" class="cs-button-solid">Leave a review</a>
+            <a href="" class="cs-button-solid">Contact Us</a>
+        </div>
+        <div class="cs-review">
+            <p class="cs-review-p">
+                Working with Strong Arm Personal Security was a game-changer for my business. Their team was professional, reliable, and went above and beyond to ensure every aspect of our security needs was met. From the initial consultation to the final execution, they made us feel completely at ease. I highly recommend their services to anyone looking for trustworthy and effective security solutions.
+            </p>
+            <img class="cs-profile" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/profile1.png" alt="profile" width="60" height="60">
+            <div class="cs-info">
+                <span class="cs-name">Rene Rodriguez</span>
+                <span class="cs-location">Dispenary Owner, Hazel Park</span>
+            </div>
         </div>
     </div>
 </section>
