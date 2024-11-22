@@ -29,6 +29,7 @@ eleventyNavigation:
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #cs-contact-490 {
+    margin-top: 150px;
     padding: var(--sectionPadding);
   }
   #cs-contact-490 .cs-container {
@@ -168,6 +169,8 @@ eleventyNavigation:
 }
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75rem) {
+
+  #cs-contact-490 {margin-top: 0px;}
   #cs-contact-490 .cs-container {
     max-width: 80rem;
     flex-direction: row;
@@ -202,7 +205,7 @@ eleventyNavigation:
 
           
             <!--Phone-->
-            <span class="cs-header" style="margin-top: 30px; color:var(--primary) ;">Call Us Now</span>
+            <span class="cs-header" style="margin-top: 30px; color:var() ;">Call Us Now</span>
             <a href="tel:{{client.phoneForTel}}" class="cs-link">{{client.phoneFormatted}}</a>
 
             <a href="tel:{{client.phoneForTel}}" class="cs-button-solid">Get Protection Now</a>
